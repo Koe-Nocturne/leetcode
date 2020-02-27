@@ -32,3 +32,18 @@ var addTwoNumbers = function(l1, l2) {
   addTwoNumbershelper(l1,l2)
   return l2;
 };
+
+var isPalindrome = function(x) {
+  let leftP = 0;
+  let str = x.toString();
+  let rightP = str.length - 1;
+  
+  while(leftP < rightP) {
+      if(str[leftP] !== str[rightP]){
+          return false;
+      }
+      leftP++;
+      rightP--;
+  }
+  return true;
+};
